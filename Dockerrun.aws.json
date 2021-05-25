@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "api",
-      "image": "382707088245.dkr.ecr.${AWS_REGION}.amazonaws.com/test-api",
+      "image": "382707088245.dkr.ecr.ap-northeast-2.amazonaws.com/test-api",
       "hostname": "api",
       "essential": true,
       "memory": 128

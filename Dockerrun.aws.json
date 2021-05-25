@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "api",
-      "image": "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${APPLICATION_NAME}-api",
+      "image": "382707088245.dkr.ecr.${AWS_REGION}.amazonaws.com/test-api",
       "hostname": "api",
       "essential": true,
       "memory": 128

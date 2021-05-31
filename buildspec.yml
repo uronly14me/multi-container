@@ -9,11 +9,6 @@ phases:
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
   build:
     commands:
-      # Test Build (Dockerfile.dev)
-      #- echo Build started on `date`
-      #- echo Building Docker test image...
-      #- docker build -t $IMAGE_REPO_NAME:$TEST_IMAGE_TAG -f Dockerfile.dev .
-      #- docker run -e CI=true $IMAGE_REPO_NAME:$TEST_IMAGE_TAG npm run test
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker-compose --file=docker-compose-prod.yml build

@@ -7,7 +7,5 @@ services:
     volumes:
       - /app/node_modules
       - ./api:/app
-    env_file:
-      - ./api/dev.env
     ports:
       - "5000:5000"

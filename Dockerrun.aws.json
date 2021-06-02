@@ -13,6 +13,19 @@
           "containerPort": 5000
         }
       ]
+    },
+    {
+      "name": "auth",
+      "image": "382707088245.dkr.ecr.ap-northeast-2.amazonaws.com/test-auth",
+      "hostname": "auth",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 5000,
+          "containerPort": 5000
+        }
+      ]
     }
   ]
 }

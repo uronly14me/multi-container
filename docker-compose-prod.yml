@@ -1,12 +1,5 @@
 version: "3.8"
 services:
-  nginx:
-    image: 382707088245.dkr.ecr.ap-northeast-2.amazonaws.com/test-nginx
-    restart: always
-    build:
-      context: ./nginx
-    ports:
-      - "80:80"
   api:
     image: 382707088245.dkr.ecr.ap-northeast-2.amazonaws.com/test-api
     build:
@@ -16,12 +9,3 @@ services:
       - ./api:/app
     ports:
       - "5000:5000"
-  auth:
-    image: 382707088245.dkr.ecr.ap-northeast-2.amazonaws.com/test-auth
-    build:
-        context: ./auth
-    volumes:
-      - /app/node_modules
-      - ./auth:/auth
-    ports:
-      - "3000:3000"

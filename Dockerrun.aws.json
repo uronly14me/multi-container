@@ -2,20 +2,6 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {
-      "name": "nginx",
-      "image": "382707088245.dkr.ecr.ap-northeast-2.amazonaws.com/test-nginx",
-      "hostname": "nginx",
-      "essential": true,
-      "portMappings": [
-        {
-          "hostPort": 80,
-          "containerPort": 80
-        }
-      ],
-      "links": ["auth", "api"],
-      "memory": 64
-    },
-    {
       "name": "api",
       "image": "382707088245.dkr.ecr.ap-northeast-2.amazonaws.com/test-api",
       "hostname": "api",
@@ -23,21 +9,8 @@
       "memory": 128,
       "portMappings": [
         {
-          "hostPort": 5000,
+          "hostPort": 80,
           "containerPort": 5000
-        }
-      ]
-    },
-    {
-      "name": "auth",
-      "image": "382707088245.dkr.ecr.ap-northeast-2.amazonaws.com/test-auth",
-      "hostname": "auth",
-      "essential": true,
-      "memory": 128,
-      "portMappings": [
-        {
-          "hostPort": 3000,
-          "containerPort": 3000
         }
       ]
     }

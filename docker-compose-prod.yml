@@ -15,6 +15,6 @@ services:
         context: ./auth
     volumes:
       - /app/node_modules
-      - ./api:/auth
+      - ./auth:/auth
     ports:
       - "5000:5000"

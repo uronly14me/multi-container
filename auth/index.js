@@ -7,4 +7,4 @@ app.get('/', (req, res) => {
   res.send('This is Auth Service!')
 })
 
-app.listen(5000, () => console.log('Server is up and running', startDate));
+app.listen(3000, () => console.log('Server is up and running', startDate));

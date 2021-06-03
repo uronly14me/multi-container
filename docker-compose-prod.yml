@@ -18,3 +18,9 @@ services:
       - ./auth:/app
     ports:
       - "3000:3000"
+  auth:
+    image: 382707088245.dkr.ecr.ap-northeast-2.amazonaws.com/test-nginx
+    build:
+        context: ./nginx
+    ports:
+      - "80:80"
